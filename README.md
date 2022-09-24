@@ -27,7 +27,7 @@ This plugin offers two commands:
 Because this plugin uses Vim's quickfix list, you can navigate to the previous and next question with `:cprev` and `:cnext`.
 If you use T. Pope's [unimpaired](https://github.com/tpope/vim-unimpaired) plugin, these functions have the shortcuts `[q` and `]q` which you can coincidentally remember as "previous question" and "next question".
 
-This plugin defines default bindings (note that leader is the backslash by default):
+This plugin defines default bindings for the two commands (note that leader is the backslash by default):
 
 - `<leader>sq` invokes `SearchQuestions`
 - `<leader>pq` invokes `PasteQuestions`
@@ -39,3 +39,7 @@ nmap <leader>sq <Plug>(SearchQuestions)
 nmap <leader>pq <Plug>(PasteQuestions)
 let g:quiz_marker = '*Q*'
 ```
+
+The plugin makes sure that special symbols such as the asterisk in `*Q*` are escaped properly, so the quiz marker should correspond to how it occurs in your notes as plain text.
+
+Also note that because the `PasteQuestions` command pastes from the quickfix list, that you will not correctly paste the collected questions if you modify the quickfix list in the meantime.
