@@ -24,6 +24,12 @@ This plugin offers two commands:
 - `:SearchQuestions` will find all questions in the current buffer and collects them in the quickfix list.
 - `:PasteQuestions` will paste the contents of the quickfix list on the next line in the current buffer.
 
+The found questions will be displayed in the modeline as follows:
+
+```
+(1 of 8): **Q**: Why is the triangle mesh so useful for real-time rasterization?
+```
+
 Because this plugin uses Vim's quickfix list, you can navigate to the previous and next question with `:cprev` and `:cnext`.
 If you use T. Pope's [unimpaired](https://github.com/tpope/vim-unimpaired) plugin, these functions have the shortcuts `[q` and `]q` which you can coincidentally remember as "previous question" and "next question".
 
